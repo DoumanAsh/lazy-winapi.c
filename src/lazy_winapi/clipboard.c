@@ -1,3 +1,9 @@
+/**
+ * @file
+ *
+ * Source code of @ref Clipboard module.
+ */
+
 #include "clipboard.h"
 
 DWORD Clipboard_get_seq_num() {

@@ -1,10 +1,139 @@
 #pragma once
+/**
+ * @file
+ *
+ * Header of @ref Clipboard module.
+ */
 
 #include <stdbool.h>
 #include <stdint.h>
 #include <wchar.h>
 
 #include <windows.h>
+
+/**
+ * @addtogroup Clipboard
+ *
+ * Provides utilities to acess Windows Clipboard.
+ *
+ * @warning Access to Clipboard from multiple threads isn't safe.
+ *
+ * General information
+ * ------------------
+ *
+ * ### Open clipboard
+ *
+ * To access any information inside clipboard it is necessary
+ * to open it by means of Clipboard_open()
+ *
+ * After that Clipboard cannot be opened anymore until Clipboard_close() is called.
+ *
+ * Examples
+ * ---------
+ *
+ * ### Get current text on clipboard.
+ *
+ * ~~~~~~~~~~~~~~~{.c}
+    #include "clipboard.h"
+
+    const DWORD format = CF_TEXT;
+    char extract_text[50] = {0};
+
+    if (Clipboard_is_format_avail(format)) {
+        Clipboard_open();
+        Clipboard_get(format, (uint8_t*)extract_text, sizeof(extract_text));
+        Clipboard_close();
+
+        printf("Content of clipboard=%s\n", extract_text);
+    }
+    else {
+        printf("No text on clipboard... \n");
+    }
+ * ~~~~~~~~~~~~~~~
+ *
+ * ### Get current unicode text on clipboard
+ *
+ * ~~~~~~~~~~~~~~~{.c}
+    #include "clipboard.h"
+
+    const DWORD format = CF_UNICODETEXT;
+    wchar_t extract_text[50] = {0};
+
+    if (Clipboard_is_format_avail(format)) {
+        Clipboard_open();
+        Clipboard_get(format, (uint8_t*)extract_text, sizeof(extract_text));
+        Clipboard_close();
+
+        printf("Content of clipboard=%ls\n", extract_text);
+    }
+    else {
+        printf("No unicode on clipboard... \n");
+    }
+ * ~~~~~~~~~~~~~~~
+ *
+ * ### Set text onto clipboard
+ *
+ * ~~~~~~~~~~~~~~~{.c}
+    #include "clipboard.h"
+
+    const DWORD format = CF_TEXT;
+    const char text[] = "For my waifu!";
+
+    Clipboard_open();
+    Clipboard_set_string(text);
+    Clipboard_close();
+
+ * ~~~~~~~~~~~~~~~
+ *
+ * ### Set unicode text onto clipboard
+ *
+ * ~~~~~~~~~~~~~~~{.c}
+    #include "clipboard.h"
+
+    const DWORD format = CF_UNICODETEXT;
+    const wchar_t text[] = L"For my waifu!";
+
+    Clipboard_open();
+    Clipboard_set_wide_string(text);
+    Clipboard_close();
+ * ~~~~~~~~~~~~~~~
+ *
+ * ### Raw set onto clipboard
+ *
+ * ~~~~~~~~~~~~~~~{.c}
+    #include "clipboard.h"
+
+    const DWORD format = CF_TEXT
+    const unit8_t data[] = {1, 2, 3, 4, 5, 0};
+
+    Clipboard_open();
+    Clipboard_set(format, data, sizeof(data));
+    Clipboard_close();
+ * ~~~~~~~~~~~~~~~
+ *
+ * ### Use own clipboard format.
+ *
+ * ~~~~~~~~~~~~~~~{.c}
+    #include "clipboard.h"
+
+    const wchar_t format_name[] = L"testing";
+    const UINT format = Clipboard_register_format(format_name);
+
+    const uint8_t data[] = {1, 2, 3, 55, 2};
+
+    printf("Got ID=%u for my format\n", format);
+
+    Clipboard_open();
+    if (Clipboard_set(format, data, sizeof(data))) {
+        printf("Successfully set data to my clipboard format.\n");
+    }
+    else {
+        printf("Failed to set data :(\n");
+    }
+    Clipboard_close();
+ * ~~~~~~~~~~~~~~~
+ */
+/*@{*/
 
 /**
  * @return Current value of clipboard sequence number.
@@ -45,10 +174,10 @@ bool Clipboard_empty();
  *
  * @note Can be called only after Clipboard_open()
  *
- * @param format Format of clipboard to retrieve.
+ * @param[in] format Format of clipboard to retrieve.
  * @param[out] ptr Memory to hold content of clipboard.
- * @param size Size of memory to hold content.
- *             Content is truncated by this size if necessary.
+ * @param[in] size Size of memory to hold content.
+ *                 Content is truncated by this size if necessary.
  *
  * @return Number of copied bytes.
  * @retval 0 On failure.
@@ -60,9 +189,9 @@ size_t Clipboard_get(UINT format, uint8_t *ptr, size_t size);
  *
  * @note Can be called only after Clipboard_open()
  *
- * @param format Format of clipboard to retrieve.
- * @param ptr Data to set.
- * @param size Size of data to set.
+ * @param[in] format Format of clipboard to retrieve.
+ * @param[out] ptr Data to set.
+ * @param[in] size Size of data to set.
  *
  * @retval true On success.
  * @retval false On failure.
@@ -74,7 +203,7 @@ bool Clipboard_set(UINT format, const uint8_t *ptr, size_t size);
  *
  * @note Can be called only after Clipboard_open()
  *
- * @param text String to set.
+ * @param[in] text String to set.
  *
  * @retval true On success.
  * @retval false On failure.
@@ -86,7 +215,7 @@ bool Clipboard_set_wide_string(const wchar_t *text);
  *
  * @note Can be called only after Clipboard_open()
  *
- * @param text Unicode string to set.
+ * @param[in] text Unicode string to set.
  *
  * @retval true On success.
  * @retval false On failure.
@@ -102,6 +231,7 @@ bool Clipboard_set_string(const char *text);
 UINT Clipboard_next_avail_format();
 
 /**
+ * @param[in] format Clipboard format identifier.
  * @retval true Specified format presents on clipboard.
  * @retval false Otherwise.
  */
@@ -117,9 +247,11 @@ int Clipboard_count_avail_formats();
  *
  * If format with such name already exists, its identifier is returned.
  *
- * @param name New format's name.
+ * @param[in] name New format's name.
  *
  * @return Identifier of new format.
  * @retval 0 On failure.
  */
 UINT Clipboard_register_format(const wchar_t *name);
+
+/*@}*/

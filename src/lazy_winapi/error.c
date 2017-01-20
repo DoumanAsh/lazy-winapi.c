@@ -1,8 +1,10 @@
-#include "error.h"
+/**
+ * @file
+ *
+ * Source code of @ref Error module.
+ */
 
-DWORD Error_get_last() {
-    return GetLastError();
-}
+#include "error.h"
 
 /**
  * Performs error handling for FormatMessageW.

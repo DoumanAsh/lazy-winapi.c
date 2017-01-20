@@ -48,14 +48,13 @@ if (UNIT_TESTING)
     include_directories(src)
     target_link_libraries(ut lazy_winapi)
 
-
     add_dependencies(ut Criterion)
-    include_directories(${3PP_PREFIX}/src/Criterion/include)
+    include_directories(SYSTEM ${3PP_PREFIX}/src/Criterion/include)
     target_link_libraries(ut ${3PP_PREFIX}/src/Criterion/bin/libcriterion.dll)
     target_link_libraries(ut ${3PP_PREFIX}/src/Criterion/lib/libcriterion.dll.a)
 
     add_dependencies(ut Mimick)
-    include_directories(${3PP_PREFIX}/src/Mimick/include)
+    include_directories(SYSTEM ${3PP_PREFIX}/src/Mimick/include)
     target_link_libraries(ut ${3PP_PREFIX}/src/Mimick-build/libmimick.a)
 
     # Copy shared lib

@@ -35,11 +35,11 @@ Test(clipboard_mock, get_fail_no_data) {
     char extract_text[50] = {0};
 
     CREATE_MOCK(GetClipboardData);
-    mmk_when(GetClipboardData(mmk_eq(UINT, format)), .then_return = NULL);
+    mmk_when(GetClipboardData(format), .then_return = NULL);
 
     cr_assert_eq(Clipboard_get(format, (uint8_t*)extract_text, sizeof(extract_text)), 0);
 
-    cr_assert(mmk_verify(GetClipboardData(mmk_eq(UINT, format)), .times = 1),
+    cr_assert(mmk_verify(GetClipboardData(format), .times = 1),
               "GetClipboardData incorrect invokation");
 
     mmk_reset(GetClipboardData);
@@ -57,7 +57,7 @@ Test(clipboard_mock, get_fail_no_lock) {
     int mock_data = 1;
 
     CREATE_MOCK(GetClipboardData);
-    mmk_when(GetClipboardData(mmk_eq(UINT, format)), .then_return = MOCK_RETURN_PTR(mock_data, HANDLE) );
+    mmk_when(GetClipboardData(format), .then_return = MOCK_RETURN_PTR(mock_data, HANDLE) );
 
     CREATE_MOCK(GlobalLock);
     mmk_when(GlobalLock(mmk_eq(HGLOBAL, &mock_data)), .then_return = NULL);
