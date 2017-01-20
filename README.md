@@ -1,10 +1,10 @@
 lazy-winapi.c
 --------
 
+[![Build status](https://ci.appveyor.com/api/projects/status/3csvlsc4rixq167l/branch/master?svg=true)](https://ci.appveyor.com/project/DoumanAsh/lazy-winapi-c/branch/master)
 [Documentation](https://doumanash.github.io/lazy-winapi.c/)
 
 Simple and lazy wrapper over WinAPI
-
 
 Modules
 =======
