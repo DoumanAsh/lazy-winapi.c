@@ -89,44 +89,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1b8967caf3cb1e8983ffdc97717157e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a1b8967caf3cb1e8983ffdc97717157e5">project</a> (lazy_winapi C) cmake_minimum_required(VERSION 3.0) <a class="el" href="CMakeLists_8txt.html#a87b3f6b6a71405d60224e364335aa90d">file</a>(GLOB lazy_winapi_SRC&quot;src*.c&quot;) option(BUILD_SHARED&quot;Build shared library&quot;OFF) if(BUILD_SHARED) add_library(lazy_winapi SHARED $</td></tr>
+<tr class="memitem:a1b8967caf3cb1e8983ffdc97717157e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a1b8967caf3cb1e8983ffdc97717157e5">project</a> (lazy_winapi C) cmake_minimum_required(VERSION 3.0) file(GLOB lazy_winapi_SRC&quot;src*.c&quot;) option(BUILD_SHARED&quot;Build shared library&quot;OFF) if(BUILD_SHARED) add_library(lazy_winapi SHARED $</td></tr>
 <tr class="separator:a1b8967caf3cb1e8983ffdc97717157e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80cf5ccbb03d0ad183ff0bd18fcbdc44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a80cf5ccbb03d0ad183ff0bd18fcbdc44">else</a> () add_library(lazy_winapi STATIC $</td></tr>
 <tr class="separator:a80cf5ccbb03d0ad183ff0bd18fcbdc44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fc85fcc15c06407ccd39cb006110df4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a8fc85fcc15c06407ccd39cb006110df4">endif</a> () set(CMAKE_EXPORT_COMPILE_COMMANDS ON) option(UNIT_TESTING&quot;Build unit tests&quot;OFF) if(UNIT_TESTING) set(3PP_PREFIX $</td></tr>
 <tr class="separator:a8fc85fcc15c06407ccd39cb006110df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac571bfe292f960fb03c40e0263175f49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#ac571bfe292f960fb03c40e0263175f49">include</a> (ExternalProject) <a class="el" href="CMakeLists_8txt.html#aedd9cdc698ce13292883e718e0ba657d">ExternalProject_Add</a>(Criterion URL https</td></tr>
+<tr class="memitem:ac571bfe292f960fb03c40e0263175f49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#ac571bfe292f960fb03c40e0263175f49">include</a> (ExternalProject) ExternalProject_Add(Criterion URL https</td></tr>
 <tr class="separator:ac571bfe292f960fb03c40e0263175f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedd9cdc698ce13292883e718e0ba657d"><td class="memItemLeft" align="right" valign="top">CONFIGURE_COMMAND BUILD_COMMAND INSTALL_COMMAND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#aedd9cdc698ce13292883e718e0ba657d">ExternalProject_Add</a> (Mimick GIT_REPOSITORY git @github.com:diacritic/Mimick.git PREFIX ${3PP_PREFIX}INSTALL_COMMAND&quot;&quot;UPDATE_DISCONNECTED 1) set(CMAKE_C_FLAGS&quot;$</td></tr>
-<tr class="separator:aedd9cdc698ce13292883e718e0ba657d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87b3f6b6a71405d60224e364335aa90d"><td class="memItemLeft" align="right" valign="top">g O0 fPIC fprofile arcs ftest coverage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a87b3f6b6a71405d60224e364335aa90d">file</a> (GLOB test_SRC&quot;test/*.c&quot;) add_executable(ut&quot;$</td></tr>
-<tr class="separator:a87b3f6b6a71405d60224e364335aa90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47019bc4a5ad03f50bf57dfc762d6095"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a47019bc4a5ad03f50bf57dfc762d6095">include_directories</a> (src) <a class="el" href="CMakeLists_8txt.html#aec1fe8e722a92784e654649e5455669b">target_link_libraries</a>(ut lazy_winapi) <a class="el" href="CMakeLists_8txt.html#a7f2c72afb0eb202e5f3ccef75ad75603">add_dependencies</a>(ut Criterion) include_directories(SYSTEM $</td></tr>
-<tr class="separator:a47019bc4a5ad03f50bf57dfc762d6095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5da7629654d1d54ffe90d54cce95d7e"><td class="memItemLeft" align="right" valign="top">src Criterion <a class="el" href="CMakeLists_8txt.html#ac571bfe292f960fb03c40e0263175f49">include</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#af5da7629654d1d54ffe90d54cce95d7e">target_link_libraries</a> (ut ${3PP_PREFIX}/src/Criterion/bin/libcriterion.dll) target_link_libraries(ut $</td></tr>
-<tr class="separator:af5da7629654d1d54ffe90d54cce95d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f2c72afb0eb202e5f3ccef75ad75603"><td class="memItemLeft" align="right" valign="top">src Criterion lib libcriterion dll a&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a7f2c72afb0eb202e5f3ccef75ad75603">add_dependencies</a> (ut Mimick) <a class="el" href="CMakeLists_8txt.html#a47019bc4a5ad03f50bf57dfc762d6095">include_directories</a>(SYSTEM $</td></tr>
-<tr class="separator:a7f2c72afb0eb202e5f3ccef75ad75603"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec1fe8e722a92784e654649e5455669b"><td class="memItemLeft" align="right" valign="top">src Mimick <a class="el" href="CMakeLists_8txt.html#ac571bfe292f960fb03c40e0263175f49">include</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#aec1fe8e722a92784e654649e5455669b">target_link_libraries</a> (ut ${3PP_PREFIX}/src/Mimick-build/libmimick.a) file(COPY $</td></tr>
-<tr class="separator:aec1fe8e722a92784e654649e5455669b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a7f2c72afb0eb202e5f3ccef75ad75603"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">src Criterion lib libcriterion dll a add_dependencies </td>
-          <td>(</td>
-          <td class="paramtype">ut&#160;</td>
-          <td class="paramname"><em>Mimick</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a80cf5ccbb03d0ad183ff0bd18fcbdc44"></a>
 <div class="memitem">
 <div class="memproto">
@@ -157,38 +129,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aedd9cdc698ce13292883e718e0ba657d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CONFIGURE_COMMAND BUILD_COMMAND INSTALL_COMMAND ExternalProject_Add </td>
-          <td>(</td>
-          <td class="paramtype">Mimick GIT_REPOSITORY git @github.com:diacritic/Mimick.git PREFIX ${3PP_PREFIX}INSTALL_COMMAND&quot;&quot;UPDATE_DISCONNECTED&#160;</td>
-          <td class="paramname"><em>1</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a87b3f6b6a71405d60224e364335aa90d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">g O0 fPIC fprofile arcs ftest coverage file </td>
-          <td>(</td>
-          <td class="paramtype">GLOB test_SRC&quot;test/*.c&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="ac571bfe292f960fb03c40e0263175f49"></a>
 <div class="memitem">
 <div class="memproto">
@@ -197,22 +137,6 @@ Functions</h2></td></tr>
           <td class="memname">include </td>
           <td>(</td>
           <td class="paramtype">ExternalProject&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a47019bc4a5ad03f50bf57dfc762d6095"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">include_directories </td>
-          <td>(</td>
-          <td class="paramtype">src&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -230,38 +154,6 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">lazy_winapi&#160;</td>
           <td class="paramname"><em>C</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af5da7629654d1d54ffe90d54cce95d7e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">src Criterion <a class="el" href="CMakeLists_8txt.html#ac571bfe292f960fb03c40e0263175f49">include</a> target_link_libraries </td>
-          <td>(</td>
-          <td class="paramtype">ut ${3PP_PREFIX}/src/Criterion/bin/libcriterion.&#160;</td>
-          <td class="paramname"><em>dll</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aec1fe8e722a92784e654649e5455669b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">src Mimick <a class="el" href="CMakeLists_8txt.html#ac571bfe292f960fb03c40e0263175f49">include</a> target_link_libraries </td>
-          <td>(</td>
-          <td class="paramtype">ut ${3PP_PREFIX}/src/Mimick-build/libmimick.&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
