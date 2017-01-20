@@ -1,0 +1,21 @@
+environment:
+  matrix:
+  - COMPILER: mingw
+    GENERATOR: "MSYS Makefiles"
+    BUILD_FLAGS: -j2
+
+init:
+  - set PATH=C:\msys64\mingw64\bin;C:\msys64\mingw32\bin;C:\msys64\usr\bin;%PATH%
+  - set MSYSTEM=MINGW64
+
+install:
+  - mkdir build
+  - cd build/
+  - cmake -G "%GENERATOR%" -DUNIT_TESTING=ON ../
+
+build_script:
+  - make
+
+test_script:
+  - ut.exe -j1
+  - cd ../

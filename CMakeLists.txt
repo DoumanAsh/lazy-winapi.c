@@ -29,15 +29,14 @@ if (UNIT_TESTING)
         PREFIX ${3PP_PREFIX}
         CONFIGURE_COMMAND ""
         BUILD_COMMAND ""
-        INSTALL_COMMAND ""
+        INSTALL_COMMAND cp ${3PP_PREFIX}/src/Criterion/bin/libcriterion.dll ${CMAKE_BINARY_DIR}
     )
 
     ExternalProject_Add(Mimick
-        GIT_REPOSITORY git@github.com:diacritic/Mimick.git
+        URL https://github.com/diacritic/Mimick/archive/master.zip
 
         PREFIX ${3PP_PREFIX}
         INSTALL_COMMAND ""
-        UPDATE_DISCONNECTED 1
     )
 
     set(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -g -O0 -fPIC -fprofile-arcs -ftest-coverage")
@@ -56,10 +55,6 @@ if (UNIT_TESTING)
     add_dependencies(ut Mimick)
     include_directories(SYSTEM ${3PP_PREFIX}/src/Mimick/include)
     target_link_libraries(ut ${3PP_PREFIX}/src/Mimick-build/libmimick.a)
-
-    # Copy shared lib
-    file(COPY ${3PP_PREFIX}/src/Criterion/bin/libcriterion.dll
-         DESTINATION ${CMAKE_BINARY_DIR})
 
     enable_testing()
     add_test(NAME    all
