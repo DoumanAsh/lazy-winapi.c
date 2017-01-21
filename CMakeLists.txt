@@ -7,6 +7,8 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${MODULE_DIR})
 include(LazyUtils)
 
 set_gcc_flags_if("-std=c99 -Wall -Wextra")
+# For MinGW we assume that minimum runtime is Vista
+set_gcc_flags_if("-D_WIN32_WINNT=0x0600")
 
 file(GLOB lazy_winapi_SRC "src/**/*.c")
 
@@ -68,12 +70,11 @@ endif()
 ###########################
 # cppcheck
 ##########################
-GET_DIRECTORY_PROPERTY(project_includes INCLUDE_DIRECTORIES)
-
 add_custom_target(
     cppcheck
     COMMAND cppcheck
+    --std=c99
     --enable=all
-    -I ${project_includes}
+    --suppress=unusedFunction:*:*
     ${lazy_winapi_SRC}
 )

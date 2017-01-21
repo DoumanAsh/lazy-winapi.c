@@ -72,6 +72,10 @@ And import it into your project.
 
 Provides utilities to access Windows clipboard.
 
+### [Process](https://doumanash.github.io/lazy-winapi.c/group__Process.html)
+
+Accessing information about process.
+
 ### [Error](https://doumanash.github.io/lazy-winapi.c/group__Error.html)
 
 Utilities to work with WinAPI error.
