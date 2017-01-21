@@ -174,6 +174,20 @@ bool Clipboard_close();
 bool Clipboard_empty();
 
 /**
+ * Retrieves size in bytes of clipboard content.
+ *
+ * `GlobalSize` is used to determine size of content.
+ *
+ * @note Can be called only after Clipboard_open().
+ *
+ * @param[in] format Format of clipboard to retrieve.
+ *
+ * @return Size of clipboard content in bytes.
+ * @retval 0 Clipboard doesn't hold data of such format.
+ */
+size_t Clipboard_get_size(UINT format);
+
+/**
  * Gets clipboard content of specific format.
  *
  * @note Can be called only after Clipboard_open().

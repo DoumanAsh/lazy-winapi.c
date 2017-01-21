@@ -18,10 +18,11 @@ Test(clipboard, set_clipboard_text) {
     cr_assert(Clipboard_open(), "Cannot open clipboard");
 
     cr_assert(Clipboard_set_string(text), "Cannot set clipboard text");
+
     cr_assert_eq(Clipboard_next_avail_format(), format, "Next available format should text");
     cr_assert(Clipboard_is_format_avail(format), "Text format isn't available!");
-
     cr_assert_eq(Clipboard_count_avail_formats(), 1, "Only one format should present");
+    cr_assert_eq(Clipboard_get_size(format), text_len, "Unexpected size of clipboard's data!");
 
     cr_assert_eq(Clipboard_get(format, (uint8_t*)extract_text, sizeof(extract_text)), text_len);
 
@@ -46,6 +47,7 @@ Test(clipboard, set_clipboard_wide_text) {
     cr_assert_eq(Clipboard_next_avail_format(), format, "Next available format should unicode text");
     cr_assert(Clipboard_is_format_avail(format), "Unicode text format isn't available!");
     cr_assert_eq(Clipboard_count_avail_formats(), 1, "Only one format should present");
+    cr_assert_eq(Clipboard_get_size(format), text_len, "Unexpected size of clipboard's data!");
 
     cr_assert_eq(Clipboard_get(format, (uint8_t*)extract_text, sizeof(extract_text)), text_len);
 
@@ -76,6 +78,7 @@ Test(clipboard, empty_clipboard) {
     cr_assert_eq(Clipboard_next_avail_format(), 0, "Next available format should none");
     cr_assert(!Clipboard_is_format_avail(format), "Text format shouldn't be available!");
     cr_assert_eq(Clipboard_count_avail_formats(), 0, "No formats should present on clipboard");
+    cr_assert_eq(Clipboard_get_size(format), 0, "Unexpected size of clipboard's data!");
 
     cr_assert(!Clipboard_get(format, (uint8_t*)extract_text, sizeof(extract_text)));
 
@@ -101,6 +104,7 @@ Test(clipboard, register_format) {
     cr_assert_eq(Clipboard_next_avail_format(), format, "Next available format should custom");
     cr_assert(Clipboard_is_format_avail(format), "Custom format isn't available!");
     cr_assert_eq(Clipboard_count_avail_formats(), 1, "Only one format should present");
+    cr_assert_eq(Clipboard_get_size(format), test_data_len, "Unexpected size of clipboard's data!");
 
     cr_assert(Clipboard_get(format, extract_data, test_data_len));
     cr_assert(Clipboard_close(), "Cannot close clipboard");

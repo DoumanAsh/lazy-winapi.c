@@ -18,6 +18,12 @@ bool Clipboard_empty() {
     return EmptyClipboard();
 }
 
+size_t Clipboard_get_size(UINT format) {
+    const HANDLE clipboard_data = GetClipboardData(format);
+
+    return clipboard_data ? (size_t)GlobalSize(clipboard_data) : 0;
+}
+
 size_t Clipboard_get(UINT format, uint8_t *ptr, size_t size) {
     const HANDLE clipboard_data = GetClipboardData(format);
 
@@ -65,7 +71,7 @@ bool Clipboard_set_string(const char *text) {
 }
 
 bool Clipboard_set_wide_string(const wchar_t *text) {
-    const size_t text_len = (wcslen(text) + 1) * 2; //include newline
+    const size_t text_len = (wcslen(text) + 1) * sizeof(wchar_t); //include newline
     return Clipboard_set(CF_UNICODETEXT, (uint8_t*)text, text_len);
 }
 
