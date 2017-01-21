@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
   0: "celpr",
-  1: "celr",
+  1: "celpr",
   2: "cep",
-  3: "ce",
+  3: "cep",
   4: "l"
 };
 

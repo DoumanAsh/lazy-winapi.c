@@ -1,4 +1,9 @@
 var searchData=
 [
+  ['process_5fget_5fexe_5fpath',['Process_get_exe_path',['../group__Process.html#ga34d12352631c5ac449d5b965d67d8b32',1,'Process_get_exe_path(HANDLE process, wchar_t *buffer, size_t size):&#160;process.c'],['../group__Process.html#ga34d12352631c5ac449d5b965d67d8b32',1,'Process_get_exe_path(HANDLE process, wchar_t *buffer, size_t size):&#160;process.c']]],
+  ['process_5fget_5fwindow_5fpid',['Process_get_window_pid',['../group__Process.html#gaae97c954d745a2267c4b2941bdbbcbb9',1,'Process_get_window_pid(const HWND window):&#160;process.c'],['../group__Process.html#gaae97c954d745a2267c4b2941bdbbcbb9',1,'Process_get_window_pid(const HWND window):&#160;process.c']]],
+  ['process_5fget_5fwindow_5ftid',['Process_get_window_tid',['../group__Process.html#gab0b0f501e8f965e21378bc2c6776cc94',1,'Process_get_window_tid(const HWND window):&#160;process.c'],['../group__Process.html#gab0b0f501e8f965e21378bc2c6776cc94',1,'Process_get_window_tid(const HWND window):&#160;process.c']]],
+  ['process_5fread_5fmem',['Process_read_mem',['../group__Process.html#ga77c171ecbd8cd43e0df91112d7ad1186',1,'Process_read_mem(HANDLE process, uintptr_t base, uint8_t *buffer, size_t size):&#160;process.c'],['../group__Process.html#ga77c171ecbd8cd43e0df91112d7ad1186',1,'Process_read_mem(HANDLE process, uintptr_t base, uint8_t *buffer, size_t size):&#160;process.c']]],
+  ['process_5fwrite_5fmem',['Process_write_mem',['../group__Process.html#ga0e4a960049a8de6b1a6143b41bcac0da',1,'Process_write_mem(HANDLE process, uintptr_t base, const uint8_t *buffer, size_t size):&#160;process.c'],['../group__Process.html#ga0e4a960049a8de6b1a6143b41bcac0da',1,'Process_write_mem(HANDLE process, uintptr_t base, const uint8_t *buffer, size_t size):&#160;process.c']]],
   ['project',['project',['../CMakeLists_8txt.html#a9987fd1b792619f69e3971e4ec3431d1',1,'CMakeLists.txt']]]
 ];
