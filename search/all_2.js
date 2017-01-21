@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['include',['include',['../CMakeLists_8txt.html#ac571bfe292f960fb03c40e0263175f49',1,'CMakeLists.txt']]]
+  ['lazy_2dwinapi_2ec',['lazy-winapi.c',['../index.html',1,'']]],
+  ['lazy_5fwinapi_2eh',['lazy_winapi.h',['../lazy__winapi_8h.html',1,'']]]
 ];

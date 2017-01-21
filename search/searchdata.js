@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "ceilpr",
+  0: "celpr",
   1: "celr",
-  2: "ceip",
+  2: "cep",
   3: "ce",
   4: "l"
 };

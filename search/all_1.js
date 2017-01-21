@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['else',['else',['../CMakeLists_8txt.html#a80cf5ccbb03d0ad183ff0bd18fcbdc44',1,'CMakeLists.txt']]],
-  ['endif',['endif',['../CMakeLists_8txt.html#a8fc85fcc15c06407ccd39cb006110df4',1,'CMakeLists.txt']]],
   ['error',['Error',['../group__Error.html',1,'']]],
   ['error_2ec',['error.c',['../error_8c.html',1,'']]],
   ['error_2eh',['error.h',['../error_8h.html',1,'']]],
