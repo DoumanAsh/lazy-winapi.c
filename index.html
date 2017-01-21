@@ -80,13 +80,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><p><a href="https://ci.appveyor.com/project/DoumanAsh/lazy-winapi-c/branch/master"></a> <a href="https://doumanash.github.io/lazy-winapi.c/">Documentation</a> <a href="https://github.com/DoumanAsh/lazy-winapi.c/archive/master.zip">Source code</a></p>
 <p>Simple and lazy wrapper over WinAPI</p>
-<h1>Requirements </h1>
+<h2>Requirements </h2>
 <ul>
 <li>C99 compiler;</li>
 <li>Windows platform;</li>
 <li>CMake (to build from source).</li>
 </ul>
-<h1>Usage </h1>
+<h2>Usage </h2>
 <h4>Build from source</h4>
 <p>Headers are together with source code in <code>src/lazy_winapi</code></p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir build</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd build/</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;cmake ../</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;make</div></div><!-- fragment --><p><b>Options:</b></p>
@@ -104,12 +104,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>In <code>src/lazy_winapi</code> you can find source code for each module.</p>
 <p>Modules are designed to be independent so you can take source code of any module and import it into your project.</p>
 <h3>Import to your CMake project</h3>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;set(MY_PREFIX &lt;some_dir&gt;)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;include(ExternalProject)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;ExternalProject_Add(lazy-winapi</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    URL https://github.com/DoumanAsh/lazy-winapi.c/archive/master.zip</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    INSTALL_COMMAND &quot;&quot;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    PREFIX ${MY_PREFIX}</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;)</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;add_dependencies(&lt;my_target&gt; LazyWinApi)</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;include_directories(SYSTEM ${MY_PREFIX}/src/lazy-winapi/src)</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;target_link_libraries(&lt;my_target&gt; ${MY_PREFIX}/src/lazy-winapi-build/liblazy_winapi.a)</div></div><!-- fragment --><h1>Modules </h1>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;set(MY_PREFIX &lt;some_dir&gt;)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;include(ExternalProject)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;ExternalProject_Add(lazy-winapi</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    URL https://github.com/DoumanAsh/lazy-winapi.c/archive/master.zip</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    INSTALL_COMMAND &quot;&quot;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    PREFIX ${MY_PREFIX}</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;)</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;add_dependencies(&lt;my_target&gt; LazyWinApi)</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;include_directories(SYSTEM ${MY_PREFIX}/src/lazy-winapi/src)</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;target_link_libraries(&lt;my_target&gt; ${MY_PREFIX}/src/lazy-winapi-build/liblazy_winapi.a)</div></div><!-- fragment --><h2>Modules </h2>
 <p>Each module has a corresponding <code>.c</code> &amp; <code>.h</code> files. Module are independent of each other so you're free to take a particular module sources. And import it into your project.</p>
-<ul>
-<li>Clipboard - provides utilities to access Windows clipboard.</li>
-<li>Error - utilities to work with WinAPI error. </li>
-</ul>
+<h3><a href="https://doumanash.github.io/lazy-winapi.c/group__Clipboard.html">Clipboard</a></h3>
+<p>Provides utilities to access Windows clipboard.</p>
+<h3><a href="https://doumanash.github.io/lazy-winapi.c/group__Error.html">Error</a></h3>
+<p>Utilities to work with WinAPI error. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
