@@ -6,10 +6,6 @@
 
 #include "clipboard.h"
 
-DWORD Clipboard_get_seq_num() {
-    return GetClipboardSequenceNumber();
-}
-
 bool Clipboard_open() {
     return OpenClipboard(0);
 }
@@ -73,16 +69,8 @@ bool Clipboard_set_wide_string(const wchar_t *text) {
     return Clipboard_set(CF_UNICODETEXT, (uint8_t*)text, text_len);
 }
 
-UINT Clipboard_next_avail_format() {
-    return EnumClipboardFormats(0);
-}
-
 bool Clipboard_is_format_avail(UINT format) {
     return IsClipboardFormatAvailable(format) != 0;
-}
-
-int Clipboard_count_avail_formats() {
-    return CountClipboardFormats();
 }
 
 UINT Clipboard_register_format(const wchar_t *name) {

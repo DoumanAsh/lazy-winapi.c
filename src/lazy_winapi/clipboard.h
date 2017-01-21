@@ -24,7 +24,7 @@
  * ### Open clipboard
  *
  * To access any information inside clipboard it is necessary
- * to open it by means of Clipboard_open()
+ * to open it by means of Clipboard_open().
  *
  * After that Clipboard cannot be opened anymore until Clipboard_close() is called.
  *
@@ -32,9 +32,9 @@
  * ---------
  *
  * Depending on the way of installation header can be included either as
- * `clipboard.h` or `lazy_winapi/clipboard.h`
+ * `clipboard.h` or `lazy_winapi/clipboard.h`.
  *
- * ### Get current text on clipboard.
+ * ### Get current text on clipboard
  *
  * ~~~~~~~~~~~~~~~{.c}
     #include "clipboard.h"
@@ -139,10 +139,11 @@
 /*@{*/
 
 /**
+ * Alias to `GetClipboardSequenceNumber()`.
  * @return Current value of clipboard sequence number.
  * @retval 0 If you do not have WINSTA_ACCESSCLIPBOARD access.
  */
-DWORD Clipboard_get_seq_num();
+#define Clipboard_get_seq_num() GetClipboardSequenceNumber()
 
 /**
  * Opens clipboard for use in the current thread.
@@ -165,7 +166,7 @@ bool Clipboard_close();
 /**
  * Empties clipboard.
  *
- * @note Can be called only after Clipboard_open()
+ * @note Can be called only after Clipboard_open().
  *
  * @retval true On success.
  * @retval false On failure.
@@ -175,7 +176,7 @@ bool Clipboard_empty();
 /**
  * Gets clipboard content of specific format.
  *
- * @note Can be called only after Clipboard_open()
+ * @note Can be called only after Clipboard_open().
  *
  * @param[in] format Format of clipboard to retrieve.
  * @param[out] ptr Memory to hold content of clipboard.
@@ -190,7 +191,7 @@ size_t Clipboard_get(UINT format, uint8_t *ptr, size_t size);
 /**
  * Sets clipboard content of specific format.
  *
- * @note Can be called only after Clipboard_open()
+ * @note Can be called only after Clipboard_open().
  *
  * @param[in] format Format of clipboard to retrieve.
  * @param[out] ptr Data to set.
@@ -204,7 +205,7 @@ bool Clipboard_set(UINT format, const uint8_t *ptr, size_t size);
 /**
  * Sets string onto clipboard as format CF_TEXT.
  *
- * @note Can be called only after Clipboard_open()
+ * @note Can be called only after Clipboard_open().
  *
  * @param[in] text String to set.
  *
@@ -216,7 +217,7 @@ bool Clipboard_set_wide_string(const wchar_t *text);
 /**
  * Sets wide string onto clipboard as format CF_UNICODETEXT.
  *
- * @note Can be called only after Clipboard_open()
+ * @note Can be called only after Clipboard_open().
  *
  * @param[in] text Unicode string to set.
  *
@@ -226,12 +227,13 @@ bool Clipboard_set_wide_string(const wchar_t *text);
 bool Clipboard_set_string(const char *text);
 
 /**
- * @note Can be called only after Clipboard_open()
+ * Alias to `EnumClipboardFormats(0)`.
+ * @note Can be called only after Clipboard_open().
  *
  * @return Next available clipboard format.
  * @retval 0 On failure or if there is no more formats.
  */
-UINT Clipboard_next_avail_format();
+#define Clipboard_next_avail_format() EnumClipboardFormats(0)
 
 /**
  * @param[in] format Clipboard format identifier.
@@ -241,9 +243,10 @@ UINT Clipboard_next_avail_format();
 bool Clipboard_is_format_avail(UINT format);
 
 /**
+ * Alias to `CountClipboardFormats()`.
  * @return Number of formats currently available on clipboard.
  */
-int Clipboard_count_avail_formats();
+#define Clipboard_count_avail_formats() CountClipboardFormats()
 
 /**
  * Registers new clipboard format.
