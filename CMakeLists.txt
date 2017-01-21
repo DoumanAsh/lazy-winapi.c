@@ -2,7 +2,11 @@ project(lazy_winapi C)
 
 cmake_minimum_required(VERSION 3.0)
 
-SET(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} --std=c99 -Wall -Wextra")
+set(MODULE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/.cmake/Modules")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${MODULE_DIR})
+include(LazyUtils)
+
+set_gcc_flags_if("-std=c99 -Wall -Wextra")
 
 file(GLOB lazy_winapi_SRC "src/**/*.c")
 
@@ -39,7 +43,7 @@ if (UNIT_TESTING)
         INSTALL_COMMAND ""
     )
 
-    set(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -g -O0 -fPIC -fprofile-arcs -ftest-coverage")
+    set_gcc_flags_if("-g -O0 -fPIC -fprofile-arcs -ftest-coverage")
     file(GLOB test_SRC "test/*.c")
 
     add_executable(ut "${test_SRC}")

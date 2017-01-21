@@ -31,6 +31,9 @@
  * Examples
  * ---------
  *
+ * Depending on the way of installation header can be included either as
+ * `clipboard.h` or `lazy_winapi/clipboard.h`
+ *
  * ### Get current text on clipboard.
  *
  * ~~~~~~~~~~~~~~~{.c}
