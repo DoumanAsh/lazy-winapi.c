@@ -75,6 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Clipboard</div>  </div>
@@ -84,10 +85,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Provides utilities to acess Windows Clipboard.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga3e044c3987d715aa2ee6b05caaf52795"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga3e044c3987d715aa2ee6b05caaf52795">Clipboard_get_seq_num</a>()&#160;&#160;&#160;GetClipboardSequenceNumber()</td></tr>
+<tr class="memdesc:ga3e044c3987d715aa2ee6b05caaf52795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias to <code>GetClipboardSequenceNumber()</code>.  <a href="#ga3e044c3987d715aa2ee6b05caaf52795">More...</a><br /></td></tr>
+<tr class="separator:ga3e044c3987d715aa2ee6b05caaf52795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96c00cd819bc2f280adfe4a727b7d07b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga96c00cd819bc2f280adfe4a727b7d07b">Clipboard_next_avail_format</a>()&#160;&#160;&#160;EnumClipboardFormats(0)</td></tr>
+<tr class="memdesc:ga96c00cd819bc2f280adfe4a727b7d07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias to <code>EnumClipboardFormats(0)</code>.  <a href="#ga96c00cd819bc2f280adfe4a727b7d07b">More...</a><br /></td></tr>
+<tr class="separator:ga96c00cd819bc2f280adfe4a727b7d07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d16037a5e1d9cac04bdb97f76484064"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga5d16037a5e1d9cac04bdb97f76484064">Clipboard_count_avail_formats</a>()&#160;&#160;&#160;CountClipboardFormats()</td></tr>
+<tr class="memdesc:ga5d16037a5e1d9cac04bdb97f76484064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias to <code>CountClipboardFormats()</code>.  <a href="#ga5d16037a5e1d9cac04bdb97f76484064">More...</a><br /></td></tr>
+<tr class="separator:ga5d16037a5e1d9cac04bdb97f76484064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gae2e0211bb97a560f053737f25264b2b1"><td class="memItemLeft" align="right" valign="top">DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gae2e0211bb97a560f053737f25264b2b1">Clipboard_get_seq_num</a> ()</td></tr>
-<tr class="separator:gae2e0211bb97a560f053737f25264b2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1dc6f3888e3c4158ae21bc29b3e5840b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">Clipboard_open</a> ()</td></tr>
 <tr class="memdesc:ga1dc6f3888e3c4158ae21bc29b3e5840b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens clipboard for use in the current thread.  <a href="#ga1dc6f3888e3c4158ae21bc29b3e5840b">More...</a><br /></td></tr>
 <tr class="separator:ga1dc6f3888e3c4158ae21bc29b3e5840b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,12 +120,8 @@ Functions</h2></td></tr>
 <tr class="memitem:gab795dd11bfb5201a222249fe5495a73c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gab795dd11bfb5201a222249fe5495a73c">Clipboard_set_string</a> (const char *text)</td></tr>
 <tr class="memdesc:gab795dd11bfb5201a222249fe5495a73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wide string onto clipboard as format CF_UNICODETEXT.  <a href="#gab795dd11bfb5201a222249fe5495a73c">More...</a><br /></td></tr>
 <tr class="separator:gab795dd11bfb5201a222249fe5495a73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacc1dc22a2d987078f6c62361e25c2471"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gacc1dc22a2d987078f6c62361e25c2471">Clipboard_next_avail_format</a> ()</td></tr>
-<tr class="separator:gacc1dc22a2d987078f6c62361e25c2471"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga01f3ae9820e3762dbf7211cc67ab52c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga01f3ae9820e3762dbf7211cc67ab52c2">Clipboard_is_format_avail</a> (UINT format)</td></tr>
 <tr class="separator:ga01f3ae9820e3762dbf7211cc67ab52c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac51a70acd4b4e44bbbc1455108b1d56e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gac51a70acd4b4e44bbbc1455108b1d56e">Clipboard_count_avail_formats</a> ()</td></tr>
-<tr class="separator:gac51a70acd4b4e44bbbc1455108b1d56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga613a203f649f6ef5e64326c05d436bb4"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga613a203f649f6ef5e64326c05d436bb4">Clipboard_register_format</a> (const wchar_t *name)</td></tr>
 <tr class="memdesc:ga613a203f649f6ef5e64326c05d436bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers new clipboard format.  <a href="#ga613a203f649f6ef5e64326c05d436bb4">More...</a><br /></td></tr>
 <tr class="separator:ga613a203f649f6ef5e64326c05d436bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,17 +131,85 @@ Functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Access to Clipboard from multiple threads isn't safe.</dd></dl>
 <h2>General information </h2>
 <h3>Open clipboard</h3>
-<p>To access any information inside clipboard it is necessary to open it by means of <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a></p>
+<p>To access any information inside clipboard it is necessary to open it by means of <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a>.</p>
 <p>After that Clipboard cannot be opened anymore until <a class="el" href="group__Clipboard.html#gae79101a3709e6c5c4788cd8c8960c453" title="Closes clipboard. ">Clipboard_close()</a> is called.</p>
 <h2>Examples </h2>
-<p>Depending on the way of installation header can be included either as <code><a class="el" href="clipboard_8h.html" title="Header of Clipboard module. ">clipboard.h</a></code> or <code><a class="el" href="clipboard_8h.html" title="Header of Clipboard module. ">lazy_winapi/clipboard.h</a></code></p>
-<h3>Get current text on clipboard.</h3>
+<p>Depending on the way of installation header can be included either as <code><a class="el" href="clipboard_8h.html" title="Header of Clipboard module. ">clipboard.h</a></code> or <code><a class="el" href="clipboard_8h.html" title="Header of Clipboard module. ">lazy_winapi/clipboard.h</a></code>.</p>
+<h3>Get current text on clipboard</h3>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="clipboard_8h.html">clipboard.h</a>&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> DWORD format = CF_TEXT;</div><div class="line"><span class="keywordtype">char</span> extract_text[50] = {0};</div><div class="line"></div><div class="line"><span class="keywordflow">if</span> (<a class="code" href="group__Clipboard.html#ga01f3ae9820e3762dbf7211cc67ab52c2">Clipboard_is_format_avail</a>(format)) {</div><div class="line">    <a class="code" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">Clipboard_open</a>();</div><div class="line">    <a class="code" href="group__Clipboard.html#ga532cb6c104554617eccd44c5b0f62a82">Clipboard_get</a>(format, (uint8_t*)extract_text, <span class="keyword">sizeof</span>(extract_text));</div><div class="line">    <a class="code" href="group__Clipboard.html#gae79101a3709e6c5c4788cd8c8960c453">Clipboard_close</a>();</div><div class="line"></div><div class="line">    printf(<span class="stringliteral">&quot;Content of clipboard=%s\n&quot;</span>, extract_text);</div><div class="line">}</div><div class="line"><span class="keywordflow">else</span> {</div><div class="line">    printf(<span class="stringliteral">&quot;No text on clipboard... \n&quot;</span>);</div><div class="line">}</div></div><!-- fragment --><h3>Get current unicode text on clipboard</h3>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="clipboard_8h.html">clipboard.h</a>&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> DWORD format = CF_UNICODETEXT;</div><div class="line"><span class="keywordtype">wchar_t</span> extract_text[50] = {0};</div><div class="line"></div><div class="line"><span class="keywordflow">if</span> (<a class="code" href="group__Clipboard.html#ga01f3ae9820e3762dbf7211cc67ab52c2">Clipboard_is_format_avail</a>(format)) {</div><div class="line">    <a class="code" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">Clipboard_open</a>();</div><div class="line">    <a class="code" href="group__Clipboard.html#ga532cb6c104554617eccd44c5b0f62a82">Clipboard_get</a>(format, (uint8_t*)extract_text, <span class="keyword">sizeof</span>(extract_text));</div><div class="line">    <a class="code" href="group__Clipboard.html#gae79101a3709e6c5c4788cd8c8960c453">Clipboard_close</a>();</div><div class="line"></div><div class="line">    printf(<span class="stringliteral">&quot;Content of clipboard=%ls\n&quot;</span>, extract_text);</div><div class="line">}</div><div class="line"><span class="keywordflow">else</span> {</div><div class="line">    printf(<span class="stringliteral">&quot;No unicode on clipboard... \n&quot;</span>);</div><div class="line">}</div></div><!-- fragment --><h3>Set text onto clipboard</h3>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="clipboard_8h.html">clipboard.h</a>&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> DWORD format = CF_TEXT;</div><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> text[] = <span class="stringliteral">&quot;For my waifu!&quot;</span>;</div><div class="line"></div><div class="line"><a class="code" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">Clipboard_open</a>();</div><div class="line"><a class="code" href="group__Clipboard.html#gab795dd11bfb5201a222249fe5495a73c">Clipboard_set_string</a>(text);</div><div class="line"><a class="code" href="group__Clipboard.html#gae79101a3709e6c5c4788cd8c8960c453">Clipboard_close</a>();</div></div><!-- fragment --><h3>Set unicode text onto clipboard</h3>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="clipboard_8h.html">clipboard.h</a>&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> DWORD format = CF_UNICODETEXT;</div><div class="line"><span class="keyword">const</span> <span class="keywordtype">wchar_t</span> text[] = L<span class="stringliteral">&quot;For my waifu!&quot;</span>;</div><div class="line"></div><div class="line"><a class="code" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">Clipboard_open</a>();</div><div class="line"><a class="code" href="group__Clipboard.html#gafe7d89d1a0aaf0f86451744578299f93">Clipboard_set_wide_string</a>(text);</div><div class="line"><a class="code" href="group__Clipboard.html#gae79101a3709e6c5c4788cd8c8960c453">Clipboard_close</a>();</div></div><!-- fragment --><h3>Raw set onto clipboard</h3>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="clipboard_8h.html">clipboard.h</a>&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> DWORD format = CF_TEXT</div><div class="line"><span class="keyword">const</span> unit8_t data[] = {1, 2, 3, 4, 5, 0};</div><div class="line"></div><div class="line"><a class="code" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">Clipboard_open</a>();</div><div class="line"><a class="code" href="group__Clipboard.html#ga98a19fc467d928531922d6d07c01892c">Clipboard_set</a>(format, data, <span class="keyword">sizeof</span>(data));</div><div class="line"><a class="code" href="group__Clipboard.html#gae79101a3709e6c5c4788cd8c8960c453">Clipboard_close</a>();</div></div><!-- fragment --><h3>Use own clipboard format.</h3>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="clipboard_8h.html">clipboard.h</a>&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keywordtype">wchar_t</span> format_name[] = L<span class="stringliteral">&quot;testing&quot;</span>;</div><div class="line"><span class="keyword">const</span> UINT format = <a class="code" href="group__Clipboard.html#ga613a203f649f6ef5e64326c05d436bb4">Clipboard_register_format</a>(format_name);</div><div class="line"></div><div class="line"><span class="keyword">const</span> uint8_t data[] = {1, 2, 3, 55, 2};</div><div class="line"></div><div class="line">printf(<span class="stringliteral">&quot;Got ID=%u for my format\n&quot;</span>, format);</div><div class="line"></div><div class="line"><a class="code" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">Clipboard_open</a>();</div><div class="line"><span class="keywordflow">if</span> (<a class="code" href="group__Clipboard.html#ga98a19fc467d928531922d6d07c01892c">Clipboard_set</a>(format, data, <span class="keyword">sizeof</span>(data))) {</div><div class="line">    printf(<span class="stringliteral">&quot;Successfully set data to my clipboard format.\n&quot;</span>);</div><div class="line">}</div><div class="line"><span class="keywordflow">else</span> {</div><div class="line">    printf(<span class="stringliteral">&quot;Failed to set data :(\n&quot;</span>);</div><div class="line">}</div><div class="line"><a class="code" href="group__Clipboard.html#gae79101a3709e6c5c4788cd8c8960c453">Clipboard_close</a>();</div></div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="clipboard_8h.html">clipboard.h</a>&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keywordtype">wchar_t</span> format_name[] = L<span class="stringliteral">&quot;testing&quot;</span>;</div><div class="line"><span class="keyword">const</span> UINT format = <a class="code" href="group__Clipboard.html#ga613a203f649f6ef5e64326c05d436bb4">Clipboard_register_format</a>(format_name);</div><div class="line"></div><div class="line"><span class="keyword">const</span> uint8_t data[] = {1, 2, 3, 55, 2};</div><div class="line"></div><div class="line">printf(<span class="stringliteral">&quot;Got ID=%u for my format\n&quot;</span>, format);</div><div class="line"></div><div class="line"><a class="code" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">Clipboard_open</a>();</div><div class="line"><span class="keywordflow">if</span> (<a class="code" href="group__Clipboard.html#ga98a19fc467d928531922d6d07c01892c">Clipboard_set</a>(format, data, <span class="keyword">sizeof</span>(data))) {</div><div class="line">    printf(<span class="stringliteral">&quot;Successfully set data to my clipboard format.\n&quot;</span>);</div><div class="line">}</div><div class="line"><span class="keywordflow">else</span> {</div><div class="line">    printf(<span class="stringliteral">&quot;Failed to set data :(\n&quot;</span>);</div><div class="line">}</div><div class="line"><a class="code" href="group__Clipboard.html#gae79101a3709e6c5c4788cd8c8960c453">Clipboard_close</a>();</div></div><!-- fragment --> <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ga5d16037a5e1d9cac04bdb97f76484064"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Clipboard_count_avail_formats</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;CountClipboardFormats()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias to <code>CountClipboardFormats()</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>Number of formats currently available on clipboard. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3e044c3987d715aa2ee6b05caaf52795"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Clipboard_get_seq_num</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;GetClipboardSequenceNumber()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias to <code>GetClipboardSequenceNumber()</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current value of clipboard sequence number. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>If you do not have WINSTA_ACCESSCLIPBOARD access. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga96c00cd819bc2f280adfe4a727b7d07b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Clipboard_next_avail_format</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;EnumClipboardFormats(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alias to <code>EnumClipboardFormats(0)</code>. </p>
+<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Next available clipboard format. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>On failure or if there is no more formats. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="gae79101a3709e6c5c4788cd8c8960c453"></a>
 <div class="memitem">
 <div class="memproto">
@@ -160,22 +235,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gac51a70acd4b4e44bbbc1455108b1d56e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Clipboard_count_avail_formats </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Number of formats currently available on clipboard. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="gafdc49ea0c7452fc4f037e0f5f59b542a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +249,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Empties clipboard. </p>
-<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a>.</dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>On success. </td></tr>
@@ -232,7 +291,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets clipboard content of specific format. </p>
-<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a>.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>Format of clipboard to retrieve. </td></tr>
@@ -245,28 +304,6 @@ Functions</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>On failure. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gae2e0211bb97a560f053737f25264b2b1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DWORD Clipboard_get_seq_num </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Current value of clipboard sequence number. </dd></dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">0</td><td>If you do not have WINSTA_ACCESSCLIPBOARD access. </td></tr>
   </table>
   </dd>
 </dl>
@@ -296,29 +333,6 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">true</td><td>Specified format presents on clipboard. </td></tr>
     <tr><td class="paramname">false</td><td>Otherwise. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gacc1dc22a2d987078f6c62361e25c2471"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">UINT Clipboard_next_avail_format </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Next available clipboard format. </dd></dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">0</td><td>On failure or if there is no more formats. </td></tr>
   </table>
   </dd>
 </dl>
@@ -412,7 +426,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets clipboard content of specific format. </p>
-<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a>.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>Format of clipboard to retrieve. </td></tr>
@@ -446,7 +460,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets wide string onto clipboard as format CF_UNICODETEXT. </p>
-<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a>.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>Unicode string to set.</td></tr>
@@ -478,7 +492,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets string onto clipboard as format CF_TEXT. </p>
-<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a>.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>String to set.</td></tr>

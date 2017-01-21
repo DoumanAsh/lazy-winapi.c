@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">clipboard.h File Reference</div>  </div>
@@ -100,10 +101,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <p><a href="clipboard_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga3e044c3987d715aa2ee6b05caaf52795"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga3e044c3987d715aa2ee6b05caaf52795">Clipboard_get_seq_num</a>()&#160;&#160;&#160;GetClipboardSequenceNumber()</td></tr>
+<tr class="memdesc:ga3e044c3987d715aa2ee6b05caaf52795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias to <code>GetClipboardSequenceNumber()</code>.  <a href="group__Clipboard.html#ga3e044c3987d715aa2ee6b05caaf52795">More...</a><br /></td></tr>
+<tr class="separator:ga3e044c3987d715aa2ee6b05caaf52795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96c00cd819bc2f280adfe4a727b7d07b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga96c00cd819bc2f280adfe4a727b7d07b">Clipboard_next_avail_format</a>()&#160;&#160;&#160;EnumClipboardFormats(0)</td></tr>
+<tr class="memdesc:ga96c00cd819bc2f280adfe4a727b7d07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias to <code>EnumClipboardFormats(0)</code>.  <a href="group__Clipboard.html#ga96c00cd819bc2f280adfe4a727b7d07b">More...</a><br /></td></tr>
+<tr class="separator:ga96c00cd819bc2f280adfe4a727b7d07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d16037a5e1d9cac04bdb97f76484064"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga5d16037a5e1d9cac04bdb97f76484064">Clipboard_count_avail_formats</a>()&#160;&#160;&#160;CountClipboardFormats()</td></tr>
+<tr class="memdesc:ga5d16037a5e1d9cac04bdb97f76484064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias to <code>CountClipboardFormats()</code>.  <a href="group__Clipboard.html#ga5d16037a5e1d9cac04bdb97f76484064">More...</a><br /></td></tr>
+<tr class="separator:ga5d16037a5e1d9cac04bdb97f76484064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gae2e0211bb97a560f053737f25264b2b1"><td class="memItemLeft" align="right" valign="top">DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gae2e0211bb97a560f053737f25264b2b1">Clipboard_get_seq_num</a> ()</td></tr>
-<tr class="separator:gae2e0211bb97a560f053737f25264b2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1dc6f3888e3c4158ae21bc29b3e5840b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">Clipboard_open</a> ()</td></tr>
 <tr class="memdesc:ga1dc6f3888e3c4158ae21bc29b3e5840b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens clipboard for use in the current thread.  <a href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">More...</a><br /></td></tr>
 <tr class="separator:ga1dc6f3888e3c4158ae21bc29b3e5840b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,12 +136,8 @@ Functions</h2></td></tr>
 <tr class="memitem:gab795dd11bfb5201a222249fe5495a73c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gab795dd11bfb5201a222249fe5495a73c">Clipboard_set_string</a> (const char *text)</td></tr>
 <tr class="memdesc:gab795dd11bfb5201a222249fe5495a73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wide string onto clipboard as format CF_UNICODETEXT.  <a href="group__Clipboard.html#gab795dd11bfb5201a222249fe5495a73c">More...</a><br /></td></tr>
 <tr class="separator:gab795dd11bfb5201a222249fe5495a73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacc1dc22a2d987078f6c62361e25c2471"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gacc1dc22a2d987078f6c62361e25c2471">Clipboard_next_avail_format</a> ()</td></tr>
-<tr class="separator:gacc1dc22a2d987078f6c62361e25c2471"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga01f3ae9820e3762dbf7211cc67ab52c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga01f3ae9820e3762dbf7211cc67ab52c2">Clipboard_is_format_avail</a> (UINT format)</td></tr>
 <tr class="separator:ga01f3ae9820e3762dbf7211cc67ab52c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac51a70acd4b4e44bbbc1455108b1d56e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gac51a70acd4b4e44bbbc1455108b1d56e">Clipboard_count_avail_formats</a> ()</td></tr>
-<tr class="separator:gac51a70acd4b4e44bbbc1455108b1d56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga613a203f649f6ef5e64326c05d436bb4"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga613a203f649f6ef5e64326c05d436bb4">Clipboard_register_format</a> (const wchar_t *name)</td></tr>
 <tr class="memdesc:ga613a203f649f6ef5e64326c05d436bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers new clipboard format.  <a href="group__Clipboard.html#ga613a203f649f6ef5e64326c05d436bb4">More...</a><br /></td></tr>
 <tr class="separator:ga613a203f649f6ef5e64326c05d436bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
