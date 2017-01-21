@@ -108,6 +108,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gafdc49ea0c7452fc4f037e0f5f59b542a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gafdc49ea0c7452fc4f037e0f5f59b542a">Clipboard_empty</a> ()</td></tr>
 <tr class="memdesc:gafdc49ea0c7452fc4f037e0f5f59b542a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empties clipboard.  <a href="#gafdc49ea0c7452fc4f037e0f5f59b542a">More...</a><br /></td></tr>
 <tr class="separator:gafdc49ea0c7452fc4f037e0f5f59b542a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef8f42482de6077a25f39955b1cb2127"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gaef8f42482de6077a25f39955b1cb2127">Clipboard_get_size</a> (UINT format)</td></tr>
+<tr class="memdesc:gaef8f42482de6077a25f39955b1cb2127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves size in bytes of clipboard content.  <a href="#gaef8f42482de6077a25f39955b1cb2127">More...</a><br /></td></tr>
+<tr class="separator:gaef8f42482de6077a25f39955b1cb2127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga532cb6c104554617eccd44c5b0f62a82"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga532cb6c104554617eccd44c5b0f62a82">Clipboard_get</a> (UINT format, uint8_t *ptr, size_t size)</td></tr>
 <tr class="memdesc:ga532cb6c104554617eccd44c5b0f62a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets clipboard content of specific format.  <a href="#ga532cb6c104554617eccd44c5b0f62a82">More...</a><br /></td></tr>
 <tr class="separator:ga532cb6c104554617eccd44c5b0f62a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,6 +307,39 @@ Functions</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>On failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaef8f42482de6077a25f39955b1cb2127"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Clipboard_get_size </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves size in bytes of clipboard content. </p>
+<p><code>GlobalSize</code> is used to determine size of content.</p>
+<dl class="section note"><dt>Note</dt><dd>Can be called only after <a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b" title="Opens clipboard for use in the current thread. ">Clipboard_open()</a>.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>Format of clipboard to retrieve.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Size of clipboard content in bytes. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Clipboard doesn't hold data of such format. </td></tr>
   </table>
   </dd>
 </dl>
