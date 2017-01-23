@@ -217,7 +217,7 @@ size_t Clipboard_get(UINT format, uint8_t *ptr, size_t size);
 bool Clipboard_set(UINT format, const uint8_t *ptr, size_t size);
 
 /**
- * Sets string onto clipboard as format CF_TEXT.
+ * Sets string onto clipboard as format CF_UNICODETEXT.
  *
  * @note Can be called only after Clipboard_open().
  *
@@ -229,7 +229,7 @@ bool Clipboard_set(UINT format, const uint8_t *ptr, size_t size);
 bool Clipboard_set_wide_string(const wchar_t *text);
 
 /**
- * Sets wide string onto clipboard as format CF_UNICODETEXT.
+ * Sets wide string onto clipboard as format CF_TEXT.
  *
  * @note Can be called only after Clipboard_open().
  *
