@@ -89,14 +89,20 @@ Test(clipboard, empty_clipboard) {
 
 Test(clipboard, register_format) {
     const wchar_t format_name[] = L"testing";
+    wchar_t get_format_name[50] = {0};
     const uint8_t test_data[] = {1, 2, 3, 55, 2};
     const size_t test_data_len = sizeof(test_data);
     const UINT format = Clipboard_register_format(format_name);
     uint8_t extract_data[50];
-
     memset(extract_data, 1, sizeof(extract_data));
 
     cr_assert(format, "Couldn't register new format");
+    cr_assert_eq(Clipboard_get_format_name(format, get_format_name, sizeof(get_format_name) / sizeof(get_format_name[0])),
+                 wcslen(format_name),
+                 "Failed to get new format name");
+    cr_assert_wcs_eq(get_format_name, format_name,
+                    "Name of new format differs from the one used to register it.");
+
     cr_assert(Clipboard_open(), "Cannot open clipboard");
 
     cr_assert(Clipboard_set(format, test_data, test_data_len), "Cannot set clipboard data");
@@ -110,4 +116,83 @@ Test(clipboard, register_format) {
     cr_assert(Clipboard_close(), "Cannot close clipboard");
 
     cr_assert_arr_eq(extract_data, test_data, test_data_len);
+}
+
+Test(clipboard, get_predefined_format) {
+    wchar_t format_name[50] = {0};
+
+#define CAT(_left, _right)   _left##_right
+#define ASSERT_FORMAT(_name) cr_assert(Clipboard_get_format_name(_name, format_name, sizeof(format_name) / sizeof(format_name[0])), "Failed to retrieve format "#_name); cr_assert_wcs_eq(format_name, CAT(L, #_name))
+    ASSERT_FORMAT(CF_BITMAP);
+    ASSERT_FORMAT(CF_DIB);
+    ASSERT_FORMAT(CF_DIBV5);
+    ASSERT_FORMAT(CF_DIF);
+    ASSERT_FORMAT(CF_DSPBITMAP);
+    ASSERT_FORMAT(CF_DSPENHMETAFILE);
+    ASSERT_FORMAT(CF_DSPMETAFILEPICT);
+    ASSERT_FORMAT(CF_DSPTEXT);
+    ASSERT_FORMAT(CF_ENHMETAFILE);
+    ASSERT_FORMAT(CF_HDROP);
+    ASSERT_FORMAT(CF_LOCALE);
+    ASSERT_FORMAT(CF_METAFILEPICT);
+    ASSERT_FORMAT(CF_OEMTEXT);
+    ASSERT_FORMAT(CF_OWNERDISPLAY);
+    ASSERT_FORMAT(CF_PALETTE);
+    ASSERT_FORMAT(CF_PENDATA);
+    ASSERT_FORMAT(CF_RIFF);
+    ASSERT_FORMAT(CF_SYLK);
+    ASSERT_FORMAT(CF_TEXT);
+    ASSERT_FORMAT(CF_WAVE);
+    ASSERT_FORMAT(CF_TIFF);
+    ASSERT_FORMAT(CF_UNICODETEXT);
+#undef ASSERT_FORMAT
+#undef CAT
+
+    for (int format = CF_GDIOBJFIRST; format <= CF_GDIOBJLAST; format++) {
+        wchar_t expected_format_name[20] = {0};
+
+        swprintf(expected_format_name,
+                 sizeof(expected_format_name) / sizeof(expected_format_name[0]),
+                 L"CF_GDIOBJ%u", format - CF_GDIOBJFIRST);
+
+        cr_assert_eq(Clipboard_get_format_name(format, format_name, sizeof(format_name) / sizeof(format_name[0])),
+                     wcslen(expected_format_name),
+                     "Failed to retrieve pre-defined format CF_GDIOBJ!");
+
+        cr_assert_wcs_eq(format_name, expected_format_name, "Unexpectedly wrong CF_GDIOBJ format!");
+    }
+
+    for (int format = CF_PRIVATEFIRST; format <= CF_PRIVATELAST; format++) {
+        wchar_t expected_format_name[20] = {0};
+
+        swprintf(expected_format_name,
+                 sizeof(expected_format_name) / sizeof(expected_format_name[0]),
+                 L"CF_PRIVATE%u", format - CF_PRIVATEFIRST);
+
+        cr_assert_eq(Clipboard_get_format_name(format, format_name, sizeof(format_name) / sizeof(format_name[0])),
+                     wcslen(expected_format_name),
+                     "Failed to retrieve pre-defined format CF_PRIVATE!");
+
+        cr_assert_wcs_eq(format_name, expected_format_name, "Unexpectedly wrong CF_PRIVATE format!");
+    }
+}
+
+Test(clipboard, get_unknown_format) {
+    const UINT format = 0xF000 + 666;
+    wchar_t format_name[50] = {0};
+
+    cr_assert_eq(Clipboard_get_format_name(format, format_name, sizeof(format_name) / sizeof(format_name[0])), 0);
+}
+
+Test(clipboard, get_format_trunc) {
+    const UINT format = CF_TEXT;
+    wchar_t format_name[5] = {0};
+    const wchar_t expected_format_name[] = L"CF_T";
+
+
+    cr_assert_eq(Clipboard_get_format_name(format, format_name, sizeof(format_name) / sizeof(format_name[0])),
+                 wcslen(expected_format_name),
+                 "Couldn't retrieve CF_TEXT format correctly.");
+
+    cr_assert_wcs_eq(format_name, expected_format_name, "Expected truncated CF_T");
 }

@@ -208,7 +208,7 @@ size_t Clipboard_get(UINT format, uint8_t *ptr, size_t size);
  * @note Can be called only after Clipboard_open().
  *
  * @param[in] format Format of clipboard to retrieve.
- * @param[out] ptr Data to set.
+ * @param[in] ptr Data to set.
  * @param[in] size Size of data to set.
  *
  * @retval true On success.
@@ -273,5 +273,17 @@ bool Clipboard_is_format_avail(UINT format);
  * @retval 0 On failure.
  */
 UINT Clipboard_register_format(const wchar_t *name);
+
+/**
+ * Retrieves the name of clipboard format.
+ *
+ * @param[in] format Format identifier.
+ * @param[out] buffer Memory to hold name.
+ * @param[in] size Number of characters to write in buffer. Including null char.
+ *
+ * @return Number of characters written. Excluding null char.
+ * @retval 0 On failure.
+ */
+int Clipboard_get_format_name(UINT format, wchar_t* buffer, size_t size);
 
 /*@}*/
