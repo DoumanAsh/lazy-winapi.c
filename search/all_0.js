@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['cat',['CAT',['../clipboard_8c.html#a495682f652e9e0d2a173d0a6233f814f',1,'clipboard.c']]],
   ['clipboard',['Clipboard',['../group__Clipboard.html',1,'']]],
   ['clipboard_2ec',['clipboard.c',['../clipboard_8c.html',1,'']]],
   ['clipboard_2eh',['clipboard.h',['../clipboard_8h.html',1,'']]],
@@ -7,6 +8,7 @@ var searchData=
   ['clipboard_5fcount_5favail_5fformats',['Clipboard_count_avail_formats',['../group__Clipboard.html#ga5d16037a5e1d9cac04bdb97f76484064',1,'clipboard.h']]],
   ['clipboard_5fempty',['Clipboard_empty',['../group__Clipboard.html#gafdc49ea0c7452fc4f037e0f5f59b542a',1,'Clipboard_empty():&#160;clipboard.c'],['../group__Clipboard.html#gafdc49ea0c7452fc4f037e0f5f59b542a',1,'Clipboard_empty():&#160;clipboard.c']]],
   ['clipboard_5fget',['Clipboard_get',['../group__Clipboard.html#ga532cb6c104554617eccd44c5b0f62a82',1,'Clipboard_get(UINT format, uint8_t *ptr, size_t size):&#160;clipboard.c'],['../group__Clipboard.html#ga532cb6c104554617eccd44c5b0f62a82',1,'Clipboard_get(UINT format, uint8_t *ptr, size_t size):&#160;clipboard.c']]],
+  ['clipboard_5fget_5fformat_5fname',['Clipboard_get_format_name',['../group__Clipboard.html#gacfc2430eb3835800c254d966181157f5',1,'Clipboard_get_format_name(UINT format, wchar_t *buffer, size_t size):&#160;clipboard.c'],['../group__Clipboard.html#gacfc2430eb3835800c254d966181157f5',1,'Clipboard_get_format_name(UINT format, wchar_t *buffer, size_t size):&#160;clipboard.c']]],
   ['clipboard_5fget_5fseq_5fnum',['Clipboard_get_seq_num',['../group__Clipboard.html#ga3e044c3987d715aa2ee6b05caaf52795',1,'clipboard.h']]],
   ['clipboard_5fget_5fsize',['Clipboard_get_size',['../group__Clipboard.html#gaef8f42482de6077a25f39955b1cb2127',1,'Clipboard_get_size(UINT format):&#160;clipboard.c'],['../group__Clipboard.html#gaef8f42482de6077a25f39955b1cb2127',1,'Clipboard_get_size(UINT format):&#160;clipboard.c']]],
   ['clipboard_5fis_5fformat_5favail',['Clipboard_is_format_avail',['../group__Clipboard.html#ga01f3ae9820e3762dbf7211cc67ab52c2',1,'Clipboard_is_format_avail(UINT format):&#160;clipboard.c'],['../group__Clipboard.html#ga01f3ae9820e3762dbf7211cc67ab52c2',1,'Clipboard_is_format_avail(UINT format):&#160;clipboard.c']]],

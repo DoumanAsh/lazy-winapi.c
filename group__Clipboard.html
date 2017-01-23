@@ -128,6 +128,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga613a203f649f6ef5e64326c05d436bb4"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga613a203f649f6ef5e64326c05d436bb4">Clipboard_register_format</a> (const wchar_t *name)</td></tr>
 <tr class="memdesc:ga613a203f649f6ef5e64326c05d436bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers new clipboard format.  <a href="#ga613a203f649f6ef5e64326c05d436bb4">More...</a><br /></td></tr>
 <tr class="separator:ga613a203f649f6ef5e64326c05d436bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacfc2430eb3835800c254d966181157f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gacfc2430eb3835800c254d966181157f5">Clipboard_get_format_name</a> (UINT format, wchar_t *buffer, size_t size)</td></tr>
+<tr class="memdesc:gacfc2430eb3835800c254d966181157f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the name of clipboard format.  <a href="#gacfc2430eb3835800c254d966181157f5">More...</a><br /></td></tr>
+<tr class="separator:gacfc2430eb3835800c254d966181157f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Provides utilities to acess Windows Clipboard. </p>
@@ -313,6 +316,55 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="gacfc2430eb3835800c254d966181157f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Clipboard_get_format_name </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wchar_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the name of clipboard format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>Format identifier. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>Memory to hold name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Number of characters to write in buffer. Including null char.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of characters written. Excluding null char. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>On failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="gaef8f42482de6077a25f39955b1cb2127"></a>
 <div class="memitem">
 <div class="memproto">
@@ -466,7 +518,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>Format of clipboard to retrieve. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">ptr</td><td>Data to set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>Data to set. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of data to set.</td></tr>
   </table>
   </dd>

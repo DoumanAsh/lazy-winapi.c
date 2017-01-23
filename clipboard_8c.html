@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">clipboard.c File Reference</div>  </div>
@@ -95,6 +96,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="clipboard_8h_source.html">clipboard.h</a>&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a495682f652e9e0d2a173d0a6233f814f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clipboard_8c.html#a495682f652e9e0d2a173d0a6233f814f">CAT</a>(_left,  _right)  &#160;&#160;&#160;_left##_right</td></tr>
+<tr class="separator:a495682f652e9e0d2a173d0a6233f814f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6bfd8231a21d42c8b1e200e16d5868c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clipboard_8c.html#ac6bfd8231a21d42c8b1e200e16d5868c">FORMATTER</a>(_name)&#160;&#160;&#160;case _name: result = swprintf(buffer, size, <a class="el" href="clipboard_8c.html#a495682f652e9e0d2a173d0a6233f814f">CAT</a>(L, #_name)); break</td></tr>
+<tr class="separator:ac6bfd8231a21d42c8b1e200e16d5868c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga1dc6f3888e3c4158ae21bc29b3e5840b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga1dc6f3888e3c4158ae21bc29b3e5840b">Clipboard_open</a> ()</td></tr>
@@ -126,10 +134,56 @@ Functions</h2></td></tr>
 <tr class="memitem:ga613a203f649f6ef5e64326c05d436bb4"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#ga613a203f649f6ef5e64326c05d436bb4">Clipboard_register_format</a> (const wchar_t *name)</td></tr>
 <tr class="memdesc:ga613a203f649f6ef5e64326c05d436bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers new clipboard format.  <a href="group__Clipboard.html#ga613a203f649f6ef5e64326c05d436bb4">More...</a><br /></td></tr>
 <tr class="separator:ga613a203f649f6ef5e64326c05d436bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacfc2430eb3835800c254d966181157f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Clipboard.html#gacfc2430eb3835800c254d966181157f5">Clipboard_get_format_name</a> (UINT format, wchar_t *buffer, size_t size)</td></tr>
+<tr class="memdesc:gacfc2430eb3835800c254d966181157f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the name of clipboard format.  <a href="group__Clipboard.html#gacfc2430eb3835800c254d966181157f5">More...</a><br /></td></tr>
+<tr class="separator:gacfc2430eb3835800c254d966181157f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Source code of <a class="el" href="group__Clipboard.html">Clipboard</a> module. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a495682f652e9e0d2a173d0a6233f814f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_left, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_right&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;_left##_right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac6bfd8231a21d42c8b1e200e16d5868c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FORMATTER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_name</td><td>)</td>
+          <td>&#160;&#160;&#160;case _name: result = swprintf(buffer, size, <a class="el" href="clipboard_8c.html#a495682f652e9e0d2a173d0a6233f814f">CAT</a>(L, #_name)); break</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
