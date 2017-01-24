@@ -114,9 +114,9 @@ static inline int format_predefined(UINT format, wchar_t* buffer, size_t size) {
         FORMATTER(CF_TIFF);
         FORMATTER(CF_UNICODETEXT);
         default:
-	        if (format >= CF_GDIOBJFIRST && format <= CF_GDIOBJLAST) {
+            if (format >= CF_GDIOBJFIRST && format <= CF_GDIOBJLAST) {
                 result = swprintf(buffer, size, L"CF_GDIOBJ%d", format - CF_GDIOBJFIRST);
-	        } else if (format >= CF_PRIVATEFIRST && format <= CF_PRIVATELAST) {
+            } else if (format >= CF_PRIVATEFIRST && format <= CF_PRIVATELAST) {
                 result = swprintf(buffer, size, L"CF_PRIVATE%d", format - CF_PRIVATEFIRST);
             }
             else {
