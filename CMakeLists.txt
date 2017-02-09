@@ -29,11 +29,13 @@ if (UNIT_TESTING)
     set(3PP_PREFIX ${CMAKE_BINARY_DIR}/3pp)
     include(ExternalProject)
     ExternalProject_Add(Criterion
-        GIT_REPOSITORY git@github.com:Snaipe/Criterion.git
-        GIT_TAG master
+        URL https://github.com/Snaipe/Criterion/releases/download/v2.3.0/criterion-v2.3.0-mingw-x64.tar.bz2
+        URL_MD5 ff30cf0bd6365f96cff3e2c1604a0180
 
         PREFIX ${3PP_PREFIX}
-        INSTALL_COMMAND ""
+        CONFIGURE_COMMAND ""
+        BUILD_COMMAND ""
+        INSTALL_COMMAND cp ${3PP_PREFIX}/src/Criterion/bin/libcriterion.dll ${CMAKE_BINARY_DIR}
     )
 
     ExternalProject_Add(Mimick
@@ -53,15 +55,12 @@ if (UNIT_TESTING)
 
     add_dependencies(ut Criterion)
     include_directories(SYSTEM ${3PP_PREFIX}/src/Criterion/include)
-    ExternalProject_Get_Property(Criterion binary_dir)
-    link_directories(${binary_dir})
-    target_link_libraries(ut libcriterion)
+    target_link_libraries(ut ${3PP_PREFIX}/src/Criterion/bin/libcriterion.dll)
+    target_link_libraries(ut ${3PP_PREFIX}/src/Criterion/lib/libcriterion.dll.a)
 
     add_dependencies(ut Mimick)
-    ExternalProject_Get_Property(Mimick binary_dir)
-    link_directories(${binary_dir})
     include_directories(SYSTEM ${3PP_PREFIX}/src/Mimick/include)
-    target_link_libraries(ut mimick)
+    target_link_libraries(ut ${3PP_PREFIX}/src/Mimick-build/libmimick.a)
 
     enable_testing()
     add_test(NAME    all
