@@ -6,6 +6,7 @@ set(MODULE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/.cmake/Modules")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${MODULE_DIR})
 include(LazyUtils)
 
+set_msvc_flags_if("/W4 /Os")
 set_gcc_flags_if("-std=c99 -Wall -Wextra")
 # For MinGW we assume that minimum runtime is Vista
 set_gcc_flags_if("-D_WIN32_WINNT=0x0600")

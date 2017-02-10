@@ -4,3 +4,10 @@ macro(set_gcc_flags_if)
         set(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} ${ARGV0}")
     endif()
 endmacro(set_gcc_flags_if)
+
+# Set MVSC flags
+macro(set_msvc_flags_if)
+    if (CMAKE_C_COMPILER_ID MATCHES "MSVC")
+        set(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} ${ARGV0}")
+    endif()
+endmacro(set_msvc_flags_if)

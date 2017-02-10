@@ -57,7 +57,7 @@ const wchar_t* Error_get_desc(DWORD error, wchar_t *buffer, size_t size) {
                         FORMAT_MESSAGE_FROM_SYSTEM |
                         FORMAT_MESSAGE_ARGUMENT_ARRAY;
 
-    const DWORD len = FormatMessageW(flags, 0, error, 0, buffer, size, 0);
+    const DWORD len = FormatMessageW(flags, 0, error, 0, buffer, (DWORD)size, 0);
 
     return len == 0 ? format_message_error(buffer, size) : format_message_ok(buffer, len);
 }

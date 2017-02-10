@@ -130,7 +130,7 @@ static inline int format_predefined(UINT format, wchar_t* buffer, size_t size) {
      * So append by ourself and do not include null char to result.
      */
     if (result == -1) {
-        result = size - 1;
+        result = (int)size - 1;
         buffer[result] = 0;
     }
     return result;
@@ -140,7 +140,7 @@ static inline int format_predefined(UINT format, wchar_t* buffer, size_t size) {
  * @return Name of user's registered format
  */
 static inline int format_custom(UINT format, wchar_t* buffer, size_t size) {
-    return GetClipboardFormatNameW(format, buffer, size);
+    return GetClipboardFormatNameW(format, buffer, (int)size);
 }
 
 int Clipboard_get_format_name(UINT format, wchar_t* buffer, size_t size) {

@@ -27,6 +27,6 @@ bool Process_write_mem(HANDLE process, uintptr_t base, const uint8_t* buffer, si
 }
 
 const wchar_t* Process_get_exe_path(HANDLE process, wchar_t* buffer, size_t size) {
-    DWORD temp = size;
+    DWORD temp = (DWORD)size;
     return QueryFullProcessImageNameW(process, 0, buffer, &temp) != 0 ? buffer : NULL;
 }
